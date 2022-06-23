@@ -55,8 +55,7 @@
     {{-- Card overlay --}}
     @if($disabled)
         <div class="overlay">
-            <i class="fas fa-2x fa-ban text-gray"></i>
+            <i class="{{ ($disabledIcon) ?: "fas fa-2x fa-ban text-gray" }} "></i>
         </div>
     @endif
-
 </div>

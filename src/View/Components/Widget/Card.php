@@ -69,6 +69,13 @@ class Card extends Component
     public $disabled;
 
     /**
+     * A Font Awesome icon for custom disabled icon.
+     *
+     * @var string
+     */
+    public $disabledIcon;
+
+    /**
      * Indicates if the card is collapsible. When enabled, a button to
      * collapse/expand the card will be available. If is set to 'collapsed'
      * string, the card will be initiated on collapsed mode.
@@ -101,7 +108,7 @@ class Card extends Component
     public function __construct(
         $title = null, $icon = null, $theme = null, $themeMode = null,
         $headerClass = null, $bodyClass = null, $footerClass = null,
-        $disabled = null, $collapsible = null, $removable = null,
+        $disabled = null, $disabledIcon = null, $collapsible = null, $removable = null,
         $maximizable = null
     ) {
         $this->title = UtilsHelper::applyHtmlEntityDecoder($title);
@@ -112,6 +119,7 @@ class Card extends Component
         $this->bodyClass = $bodyClass;
         $this->footerClass = $footerClass;
         $this->disabled = $disabled;
+        $this->disabledIcon = $disabledIcon;
         $this->removable = $removable;
         $this->collapsible = $collapsible;
         $this->maximizable = $maximizable;
